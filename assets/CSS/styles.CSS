@@ -15,11 +15,12 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     color: white;
     width: auto;
+    
 }
 
 
 header {
-    padding: 10px 35px;
+    padding: 20px 35px;
     background-color: var(--tertiary-color);
     display: flex;
     justify-content: space-between;
@@ -90,24 +91,26 @@ header nav ul li a:hover {
     font-size: 45px;
     padding: 20px;
     transition: ease;
-}
-
-.section-title:hover {
-    color: purple;
-    
-
+    padding-top: 85px;
 }
 
 .projects {
-    display: flex;
     background-color: orange;
     height: auto;
     justify-content: center;
 }
 
+.container-of-projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
 .contact-info {
     height: 900px;
-    background-color: forestgreen;
+    background-color: rgb(29, 71, 119);
 }
 
 .bio {
@@ -166,13 +169,55 @@ header nav ul li a:hover {
 .bio img:hover {
 }
 
-.project-containter {
+.project-container {
     margin: 20px;
     border: black solid;
-    background: cadetblue;
+    border-radius: 15px;
     z-index: 1000;
+    padding: 20px;
+    flex: 1 1 400px;
+    
 }
 
-.project-containter img {
-    height: 200px;
+.project-container::before {
+    content: "";
+    background-image: url(../images/wings.jpeg);
+    background-size:cover;
+    background-position: center;
+    opacity: .6;
+    position: absolute;
+}
+
+.main-proj {
+    flex: 2 1 800px;
+}
+
+.project-text {
+    width: 300px;
+    bottom: 10px;
+    margin: 200px 20px 0px 20px;
+    left: 10px;
+    color: white;
+    
+}
+
+footer {
+    background-color: rgb(34, 68, 114);
+    width: 100%;
+    padding: 20px 35px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-top: white 2px solid;
+}
+
+footer h2{
+    color: white;
+    font-size: 30px;
+    margin: 0;
+}
+
+footer div{
+    line-height: 1.5;
+    text-align: center;
 }
