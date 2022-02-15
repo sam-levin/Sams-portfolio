@@ -38,17 +38,13 @@ header {
 header h1 a {
     font-weight: bold;
     font-size: 36px;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin: 10px;
     padding: 20px;
     text-decoration: none;
 }
 
 
-header h1 a:hover {
-    color: var(--secondary-color);
-    transition: .8s;
-}
 
 .navbar ul {
     display: flex;
@@ -73,16 +69,17 @@ header nav ul li a:hover {
 
 .hero {
     height: 900px;
+    /*
     display: flex;
+    
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    */
     background-image: url(../images/Background\ image.jpg);
     background-position: center;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     background-position: 80%;
     background-attachment: fixed;
 }
@@ -94,15 +91,23 @@ header nav ul li a:hover {
     padding-top: 85px;
 }
 
+.center {
+    margin: auto;
+}
+
 .projects {
     background-color: orange;
     height: auto;
-    justify-content: center;
+    justify-content: space-between;
 }
 
+.move-right {
+    margin-left: 50px;
+}    
+
 .container-of-projects {
+    margin: 0 20px 0 20px;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -110,20 +115,27 @@ header nav ul li a:hover {
 
 .contact-info {
     height: 900px;
-    background-color: rgb(29, 71, 119);
+    background-image: url(../images/Aasgard.jpg);
+    background-position: center;
+    background-size: cover;
+
 }
+
 
 .bio {
     background: var(--secondary-color-faded);
     border-radius: 30px;
-    display: flex;
+    /*display: flex;
     flex-wrap: wrap;
+    */
     padding: 20px;
-    margin: 100px;
+    margin: 50px;
     width: auto;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    margin-bottom: 200px;
 
 }
+
 
 .bio:hover {
     background: var(--secondary-color);
@@ -133,6 +145,7 @@ header nav ul li a:hover {
 .bio-container {
     display: flex;
     align-items: flex-start;
+    flex: 0 1 auto;
 }
 
 .bio h2 {
@@ -140,15 +153,12 @@ header nav ul li a:hover {
     justify-content: center;
 }
 
-.bio h3:hover {
-    color: white;
-    transition: 1s;
-}
-
 
 .bio-text h3 {
     padding-bottom: 10px;
     padding-top: 10px;
+    font-size: 30px;
+
 }
 
 .bio-text {
@@ -157,52 +167,106 @@ header nav ul li a:hover {
 
 }
 
+.bio-text p {
+    font-size: 25px;
+}
+
+.bio-text a {
+    text-decoration: none;
+    color: papayawhip;
+}
+
 .bio img {
     height: 400px;
     width: auto;
-    flex: 1 1 50%;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 
 }
 
-.bio img:hover {
-}
 
 .project-container {
     margin: 20px;
-    border: black solid;
     border-radius: 15px;
     z-index: 1000;
     padding: 20px;
-    flex: 1 1 400px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
     
 }
 
-.project-container::before {
-    content: "";
-    background-image: url(../images/wings.jpeg);
-    background-size:cover;
+.project-background {
     background-position: center;
-    opacity: .6;
-    position: absolute;
+    background-size: cover;
 }
 
 .main-proj {
-    flex: 2 1 800px;
+    flex: 1 1 400px;
+    background-image: url(../images/wings.jpeg);
+    
+}
+
+
+.main-proj-text {
+    margin: 200px 20px 0px 20px;
+}
+
+.other-projects {
+    flex: 1 1 400px;
+}
+
+.recipe {
+    background-image: url(../images/recipe.jpeg);
+}
+
+.banana {
+    background-image: url(../images/bunch.jpeg);
+
+}
+
+.run-buddy {
+    background-image: url(../images/run-buddy.png);
 }
 
 .project-text {
     width: 300px;
     bottom: 10px;
-    margin: 200px 20px 0px 20px;
+    padding: 10px;
+    margin: 100px 20px 0px 20px;
     left: 10px;
     color: white;
-    
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
+.project-text:hover {
+    background-color: rgba(0,0,0,0.9);
+    transition: 1.5s;
+}
+
+.contact {
+    background: var(--secondary-color-faded);
+    border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 100px;
+    width: auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    flex: 1 0 50%;
+}
+
+.contact:hover {
+    background: var(--secondary-color);
+    transition: .8s;
+}
+
+
+
+
 footer {
-    background-color: rgb(34, 68, 114);
+    background-color: rgb(51, 67, 90);
     width: 100%;
     padding: 20px 35px;
     display: flex;
@@ -213,11 +277,102 @@ footer {
 
 footer h2{
     color: white;
-    font-size: 30px;
+    font-size: 25px;
     margin: 0;
 }
 
 footer div{
     line-height: 1.5;
     text-align: center;
+}
+
+
+
+.bio-text a:hover {
+    color: orange;
+    transition: 2s;
+}
+
+.other-projects a:visited {
+    text-decoration: none;
+}
+
+@media screen and (max-width:980px) {
+    header {
+        padding-bottom: 20;
+        justify-content: center;
+        position: relative;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+        margin: 10px;
+    }
+    
+    .section-title {
+        width: 80%;
+    }
+    
+
+    footer h2, footer div {
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero {
+        height: 1000px;
+    }
+
+
+    .bio-container {
+        flex-wrap: wrap;
+        justify-content: center ;
+    }
+
+    .bio-text {
+        text-align: center;
+    }
+
+    .bio-container img {
+        width: 100px;
+        height: fit-content;
+        flex: 0 3 50%;
+    }
+
+  
+
+
+}
+
+
+@media screen and(max-width: 768px) {
+    
+    section {
+        padding: 30px 15px;
+    }
+
+    .bio {
+        margin: auto ;
+    }
+
+    .bio-container {
+        margin: auto;
+    }
+
+    .project-text {
+        margin: 10px;
+    }
+
+
 }
